@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/viewPagerContainerFragment">
+
+    <fragment
+        android:id="@+id/viewPagerContainerFragment"
+        android:name="com.example.navigationwithviewpager.viewPagerContainerFragment.ViewPagerContainerFragment"
+        android:label="ViewPagerContainerFragment"
+        tools:layout="@layout/fragment_viewpager_container">
+        <action
+            android:id="@+id/action_viewPagerContainerFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_viewPagerContainerFragment_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <action
+            android:id="@+id/action_viewPagerContainerFragment_to_notificationFragment2"
+            app:destination="@id/notificationFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.navigationwithviewpager.blankfragment.HomeFragment2"
+        android:label="HomeFragment2"
+        tools:layout="@layout/fragment_home2">
+        <action
+            android:id="@+id/action_homeFragment2_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.example.navigationwithviewpager.blankfragment.HomeFragment3"
+        android:label="HomeFragment3"
+        tools:layout="@layout/fragment_home3" />
+
+    <fragment
+        android:id="@+id/dashboardFragment2"
+        android:name="com.example.navigationwithviewpager.blankfragment.DashboardFragment2"
+        android:label="DashboardFragment2"
+        tools:layout="@layout/fragment_dashboard2">
+        <action
+            android:id="@+id/action_dashboardFragment2_to_dashboardFragment3"
+            app:destination="@id/dashboardFragment3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment3"
+        android:name="com.example.navigationwithviewpager.blankfragment.DashboardFragment3"
+        android:label="DashboardFragment3"
+        tools:layout="@layout/fragment_dashboard3" />
+
+    <fragment
+        android:id="@+id/notificationFragment2"
+        android:name="com.example.navigationwithviewpager.blankfragment.NotificationFragment2"
+        android:label="NotificationFragment2"
+        tools:layout="@layout/fragment_notification2">
+        <action
+            android:id="@+id/action_notificationFragment2_to_notificationFragment3"
+            app:destination="@id/notificationFragment3" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/notificationFragment3"
+        android:name="com.example.navigationwithviewpager.blankfragment.NotificationFragment3"
+        android:label="NotificationFragment3"
+        tools:layout="@layout/fragment_notification3" />
+
+    <action
+        android:id="@+id/action_global_start"
+        app:destination="@id/viewPagerContainerFragment"
+        app:popUpTo="@id/viewPagerContainerFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/tvShowFragment"
+        android:name="com.example.navigationwithviewpager.blankfragment.TvShowFragment"
+        android:label="TvShowFragment"
+        tools:layout="@layout/fragment_tvshows" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.navigationwithviewpager.blankfragment.FavouriteFragment"
+        android:label="FavouriteFragment"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.navigationwithviewpager.blankfragment.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>
